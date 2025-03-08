@@ -13,6 +13,11 @@ import { BrandModule } from './modules/brand/brand.module';
 import { BannerModule } from './modules/banner/banner.module';
 import { Category } from './modules/category/entities/category.entity';
 import { Brand } from './modules/brand/entities/brand.entity';
+import { Product } from './modules/product/entities/product.entity';
+import { ProductVariant } from './modules/product/entities/product-variant.entity';
+import { ProductAttribute } from './modules/product/entities/product-attribute.entity';
+import { ProductAttributeValue } from './modules/product/entities/product-attribute-value.entity';
+import { ProductImage } from './modules/product/entities/product-image.entity';
 
 @Module({
   imports: [
@@ -29,7 +34,17 @@ import { Brand } from './modules/brand/entities/brand.entity';
         username: configService.get('DB_USERNAME', 'postgres'),
         password: configService.get('DB_PASSWORD', 'password'),
         database: configService.get('DB_DATABASE', 'ecommerce'),
-        entities: [User, RefreshToken, Category, Brand],
+        entities: [
+          User,
+          RefreshToken,
+          Category,
+          Brand,
+          Product,
+          ProductVariant,
+          ProductAttribute,
+          ProductAttributeValue,
+          ProductImage,
+        ],
         synchronize: configService.get('NODE_ENV') !== 'production',
         logging: false,
       }),
