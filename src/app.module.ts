@@ -18,6 +18,8 @@ import { ProductVariant } from './modules/product/entities/product-variant.entit
 import { ProductAttribute } from './modules/product/entities/product-attribute.entity';
 import { ProductAttributeValue } from './modules/product/entities/product-attribute-value.entity';
 import { ProductImage } from './modules/product/entities/product-image.entity';
+import { Cart } from './modules/cart/entities/cart.entity';
+import { CartItem } from './modules/cart/entities/cart-item.entity';
 
 @Module({
   imports: [
@@ -44,6 +46,8 @@ import { ProductImage } from './modules/product/entities/product-image.entity';
           ProductAttribute,
           ProductAttributeValue,
           ProductImage,
+          Cart,
+          CartItem,
         ],
         synchronize: configService.get('NODE_ENV') !== 'production',
         logging: false,
