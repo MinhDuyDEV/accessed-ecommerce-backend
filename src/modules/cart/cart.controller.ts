@@ -14,7 +14,7 @@ import { CartService } from './cart.service';
 import { AddToCartDto, CartResponseDto, UpdateCartItemDto } from './dto';
 import { JwtAuthGuard, OptionalJwtAuthGuard } from '../auth/guards';
 
-@Controller('api/cart')
+@Controller('carts')
 export class CartController {
   constructor(private readonly cartService: CartService) {}
 

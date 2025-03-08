@@ -20,6 +20,8 @@ import { ProductAttributeValue } from './modules/product/entities/product-attrib
 import { ProductImage } from './modules/product/entities/product-image.entity';
 import { Cart } from './modules/cart/entities/cart.entity';
 import { CartItem } from './modules/cart/entities/cart-item.entity';
+import { Wishlist } from './modules/wishlist/entities/wishlist.entity';
+import { WishlistItem } from './modules/wishlist/entities/wishlist-item.entity';
 
 @Module({
   imports: [
@@ -48,6 +50,8 @@ import { CartItem } from './modules/cart/entities/cart-item.entity';
           ProductImage,
           Cart,
           CartItem,
+          Wishlist,
+          WishlistItem,
         ],
         synchronize: configService.get('NODE_ENV') !== 'production',
         logging: false,
