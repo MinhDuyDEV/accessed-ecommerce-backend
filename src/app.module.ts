@@ -11,6 +11,7 @@ import { WishlistModule } from './modules/wishlist/wishlist.module';
 import { CategoryModule } from './modules/category/category.module';
 import { BrandModule } from './modules/brand/brand.module';
 import { BannerModule } from './modules/banner/banner.module';
+import { Category } from './modules/category/entities/category.entity';
 
 @Module({
   imports: [
@@ -27,7 +28,7 @@ import { BannerModule } from './modules/banner/banner.module';
         username: configService.get('DB_USERNAME', 'postgres'),
         password: configService.get('DB_PASSWORD', 'password'),
         database: configService.get('DB_DATABASE', 'ecommerce'),
-        entities: [User, RefreshToken],
+        entities: [User, RefreshToken, Category],
         synchronize: configService.get('NODE_ENV') !== 'production',
         logging: false,
       }),
