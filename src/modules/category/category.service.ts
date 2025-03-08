@@ -12,8 +12,11 @@ import {
   UpdateCategoryDto,
   QueryCategoryDto,
   CategoryResponseDto,
+  CategorySortBy,
+  SortOrder,
 } from './dto';
 import { plainToInstance } from 'class-transformer';
+import { PaginationResponseDto } from '../product/dto/pagination-response.dto';
 
 @Injectable()
 export class CategoryService {
@@ -58,7 +61,9 @@ export class CategoryService {
     });
   }
 
-  async findAll(query: QueryCategoryDto): Promise<CategoryResponseDto[]> {
+  async findAll(
+    query: QueryCategoryDto,
+  ): Promise<PaginationResponseDto<CategoryResponseDto>> {
     const {
       name,
       parentId,
@@ -67,6 +72,10 @@ export class CategoryService {
       includeChildren = false,
       includeProducts = false,
       onlyRootCategories = false,
+      sortBy = CategorySortBy.DISPLAY_ORDER,
+      sortOrder = SortOrder.ASC,
+      page = 1,
+      limit = 10,
     } = query;
 
     // Build where conditions
@@ -99,17 +108,40 @@ export class CategoryService {
       relations.push('products');
     }
 
-    // Find categories
+    // Build order
+    const order: any = {};
+    order[sortBy] = sortOrder;
+
+    // If sorting by display order, add name as secondary sort
+    if (sortBy === CategorySortBy.DISPLAY_ORDER) {
+      order.name = SortOrder.ASC;
+    }
+
+    // Count total items
+    const totalItems = await this.categoryRepository.count({
+      where: whereConditions,
+    });
+
+    // Find categories with pagination
     const categories = await this.categoryRepository.find({
       where: whereConditions,
       relations,
-      order: { displayOrder: 'ASC', name: 'ASC' },
+      order,
+      skip: (page - 1) * limit,
+      take: limit,
     });
 
-    return categories.map((category) =>
+    const categoryDtos = categories.map((category) =>
       plainToInstance(CategoryResponseDto, category, {
         excludeExtraneousValues: true,
       }),
+    );
+
+    return new PaginationResponseDto<CategoryResponseDto>(
+      categoryDtos,
+      page,
+      limit,
+      totalItems,
     );
   }
 

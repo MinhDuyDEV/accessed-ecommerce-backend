@@ -10,6 +10,7 @@ import {
   Min,
   Max,
   IsArray,
+  IsDate,
 } from 'class-validator';
 import { ProductStatus, ProductType } from '../entities/product.entity';
 
@@ -97,6 +98,16 @@ export class QueryProductDto {
   @Transform(({ value }) => value === 'true')
   @IsBoolean()
   includeBrand?: boolean;
+
+  @IsOptional()
+  @Type(() => Date)
+  @IsDate()
+  createdAfter?: Date;
+
+  @IsOptional()
+  @Type(() => Date)
+  @IsDate()
+  createdBefore?: Date;
 
   @IsOptional()
   @IsEnum(ProductSortBy)

@@ -794,4 +794,168 @@ export class ProductService {
       totalItems,
     );
   }
+
+  async advancedSearch(
+    searchTerm?: string,
+    query?: QueryProductDto,
+  ): Promise<PaginationResponseDto<ProductResponseDto>> {
+    const {
+      categoryIds,
+      brandId,
+      minPrice,
+      maxPrice,
+      hasDiscount,
+      inStock,
+      status,
+      type,
+      createdAfter,
+      createdBefore,
+      includeInactive = false,
+      includeVariants = false,
+      includeImages = false,
+      includeCategories = false,
+      includeBrand = false,
+      sortBy = ProductSortBy.CREATED_AT,
+      sortOrder = 'DESC',
+      page = 1,
+      limit = 10,
+    } = query || {};
+
+    // Build query
+    const queryBuilder = this.productRepository.createQueryBuilder('product');
+
+    // Join with categories if filtering by category
+    if (categoryIds && categoryIds.length > 0) {
+      queryBuilder.innerJoin('product.categories', 'category');
+      queryBuilder.andWhere('category.id IN (:...categoryIds)', {
+        categoryIds,
+      });
+    }
+
+    // Apply search term filter if provided
+    if (searchTerm && searchTerm.trim() !== '') {
+      queryBuilder.andWhere(
+        '(product.name ILIKE :searchTerm OR product.description ILIKE :searchTerm OR product.sku ILIKE :searchTerm)',
+        { searchTerm: `%${searchTerm.trim()}%` },
+      );
+    }
+
+    // Apply brand filter if provided
+    if (brandId) {
+      queryBuilder.andWhere('product.brandId = :brandId', { brandId });
+    }
+
+    // Apply price range filters if provided
+    if (minPrice !== undefined) {
+      queryBuilder.andWhere('product.price >= :minPrice', { minPrice });
+    }
+
+    if (maxPrice !== undefined) {
+      queryBuilder.andWhere('product.price <= :maxPrice', { maxPrice });
+    }
+
+    // Apply discount filter if provided
+    if (hasDiscount === true) {
+      queryBuilder.andWhere('product.discountPrice IS NOT NULL');
+      queryBuilder.andWhere('product.discountPrice > 0');
+    }
+
+    // Apply stock filter if provided
+    if (inStock === true) {
+      queryBuilder.andWhere('product.quantity > 0');
+    }
+
+    // Apply date range filters if provided
+    if (createdAfter) {
+      queryBuilder.andWhere('product.createdAt >= :createdAfter', {
+        createdAfter,
+      });
+    }
+
+    if (createdBefore) {
+      queryBuilder.andWhere('product.createdAt <= :createdBefore', {
+        createdBefore,
+      });
+    }
+
+    // Apply status filter if provided
+    if (status && status.length > 0) {
+      queryBuilder.andWhere('product.status IN (:...status)', { status });
+    } else if (!includeInactive) {
+      // By default, only include published products
+      queryBuilder.andWhere('product.status = :status', {
+        status: ProductStatus.PUBLISHED,
+      });
+    }
+
+    // Apply type filter if provided
+    if (type && type.length > 0) {
+      queryBuilder.andWhere('product.type IN (:...type)', { type });
+    }
+
+    // Apply relations
+    if (includeVariants) {
+      queryBuilder.leftJoinAndSelect('product.variants', 'variant');
+
+      if (includeImages) {
+        queryBuilder.leftJoinAndSelect('variant.images', 'variantImage');
+        queryBuilder.leftJoinAndSelect(
+          'variant.attributeValues',
+          'attributeValue',
+        );
+        queryBuilder.leftJoinAndSelect('attributeValue.attribute', 'attribute');
+      }
+    }
+
+    if (includeImages) {
+      queryBuilder.leftJoinAndSelect('product.images', 'image');
+    }
+
+    if (includeCategories) {
+      queryBuilder.leftJoinAndSelect('product.categories', 'categories');
+    }
+
+    if (includeBrand) {
+      queryBuilder.leftJoinAndSelect('product.brand', 'brand');
+    }
+
+    // Apply sorting
+    switch (sortBy) {
+      case ProductSortBy.NAME:
+        queryBuilder.orderBy('product.name', sortOrder);
+        break;
+      case ProductSortBy.PRICE:
+        queryBuilder.orderBy('product.price', sortOrder);
+        break;
+      case ProductSortBy.CREATED_AT:
+      default:
+        queryBuilder.orderBy('product.createdAt', sortOrder);
+        break;
+    }
+
+    // Get total count
+    const totalItems = await queryBuilder.getCount();
+
+    // Apply pagination
+    queryBuilder.skip((page - 1) * limit);
+    queryBuilder.take(limit);
+
+    // Get results
+    const products = await queryBuilder.getMany();
+
+    // Transform to DTOs
+    const productDtos = products.map((product) =>
+      plainToInstance(ProductResponseDto, product, {
+        excludeExtraneousValues: true,
+      }),
+    );
+
+    // Return paginated response
+    return new PaginationResponseDto<ProductResponseDto>(
+      productDtos,
+      page,
+      limit,
+      totalItems,
+    );
+  }
 }

@@ -23,6 +23,7 @@ import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import { RolesGuard } from '../auth/guards/roles.guard';
 import { Roles } from '../auth/decorators/roles.decorator';
 import { UserRole } from '../user/entities/user.entity';
+import { PaginationResponseDto } from '../product/dto/pagination-response.dto';
 
 @Controller('categories')
 export class CategoryController {
@@ -38,7 +39,9 @@ export class CategoryController {
   }
 
   @Get()
-  findAll(@Query() query: QueryCategoryDto): Promise<CategoryResponseDto[]> {
+  findAll(
+    @Query() query: QueryCategoryDto,
+  ): Promise<PaginationResponseDto<CategoryResponseDto>> {
     return this.categoryService.findAll(query);
   }
 

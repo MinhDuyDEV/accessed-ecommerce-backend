@@ -63,6 +63,14 @@ export class ProductController {
     return this.productService.searchProducts(term, query);
   }
 
+  @Get('advanced-search')
+  advancedSearch(
+    @Query('term') term?: string,
+    @Query() query?: QueryProductDto,
+  ): Promise<PaginationResponseDto<ProductResponseDto>> {
+    return this.productService.advancedSearch(term, query);
+  }
+
   @Get('category/:categoryId')
   findByCategory(
     @Param('categoryId', ParseUUIDPipe) categoryId: string,
