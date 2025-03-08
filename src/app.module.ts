@@ -5,6 +5,12 @@ import { UserModule } from './modules/user/user.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { User } from './modules/user/entities/user.entity';
 import { RefreshToken } from './modules/auth/entities/refresh-token.entity';
+import { ProductModule } from './modules/product/product.module';
+import { CartModule } from './modules/cart/cart.module';
+import { WishlistModule } from './modules/wishlist/wishlist.module';
+import { CategoryModule } from './modules/category/category.module';
+import { BrandModule } from './modules/brand/brand.module';
+import { BannerModule } from './modules/banner/banner.module';
 
 @Module({
   imports: [
@@ -28,6 +34,12 @@ import { RefreshToken } from './modules/auth/entities/refresh-token.entity';
     }),
     UserModule,
     AuthModule,
+    ProductModule,
+    CartModule,
+    WishlistModule,
+    CategoryModule,
+    BrandModule,
+    BannerModule,
   ],
 })
 export class AppModule {}
