@@ -10,7 +10,7 @@ import { ConfigService } from '@nestjs/config';
 import { randomBytes } from 'crypto';
 import { RefreshToken } from './entities/refresh-token.entity';
 import { UserService } from '../user/user.service';
-import { User } from '../user/entities/user.entity';
+import { User, UserRole } from '../user/entities/user.entity';
 import { RegisterDto, RefreshTokenDto } from './dto';
 
 @Injectable()
@@ -63,7 +63,10 @@ export class AuthService {
     }
 
     // Create new user
-    const newUser = await this.userService.create(registerDto);
+    const newUser = await this.userService.create({
+      ...registerDto,
+      role: UserRole.ADMIN,
+    });
 
     // Create a copy of user and remove password
     const userWithoutPassword = { ...newUser };
