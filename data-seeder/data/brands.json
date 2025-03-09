@@ -1,0 +1,121 @@
+[
+  {
+    "name": "Apple",
+    "description": "Innovative technology company",
+    "logo": "https://example.com/images/brands/apple.png",
+    "website": "https://www.apple.com",
+    "isActive": true
+  },
+  {
+    "name": "Samsung",
+    "description": "Global electronics manufacturer",
+    "logo": "https://example.com/images/brands/samsung.png",
+    "website": "https://www.samsung.com",
+    "isActive": true
+  },
+  {
+    "name": "Sony",
+    "description": "Leading electronics and entertainment company",
+    "logo": "https://example.com/images/brands/sony.png",
+    "website": "https://www.sony.com",
+    "isActive": true
+  },
+  {
+    "name": "Dell",
+    "description": "Computer hardware manufacturer",
+    "logo": "https://example.com/images/brands/dell.png",
+    "website": "https://www.dell.com",
+    "isActive": true
+  },
+  {
+    "name": "Canon",
+    "description": "Imaging and optical products manufacturer",
+    "logo": "https://example.com/images/brands/canon.png",
+    "website": "https://www.canon.com",
+    "isActive": true
+  },
+  {
+    "name": "Penguin Random House",
+    "description": "Leading book publisher",
+    "logo": "https://example.com/images/brands/penguin.png",
+    "website": "https://www.penguinrandomhouse.com",
+    "isActive": true
+  },
+  {
+    "name": "HarperCollins",
+    "description": "Major book publishing company",
+    "logo": "https://example.com/images/brands/harpercollins.png",
+    "website": "https://www.harpercollins.com",
+    "isActive": true
+  },
+  {
+    "name": "Simon & Schuster",
+    "description": "American publishing company",
+    "logo": "https://example.com/images/brands/simonschuster.png",
+    "website": "https://www.simonandschuster.com",
+    "isActive": true
+  },
+  {
+    "name": "Tiffany & Co.",
+    "description": "Luxury jewelry and specialty retailer",
+    "logo": "https://example.com/images/brands/tiffany.png",
+    "website": "https://www.tiffany.com",
+    "isActive": true
+  },
+  {
+    "name": "Cartier",
+    "description": "French luxury goods conglomerate",
+    "logo": "https://example.com/images/brands/cartier.png",
+    "website": "https://www.cartier.com",
+    "isActive": true
+  },
+  {
+    "name": "Pandora",
+    "description": "Danish jewelry manufacturer and retailer",
+    "logo": "https://example.com/images/brands/pandora.png",
+    "website": "https://www.pandora.net",
+    "isActive": true
+  },
+  {
+    "name": "Rolex",
+    "description": "Swiss luxury watch manufacturer",
+    "logo": "https://example.com/images/brands/rolex.png",
+    "website": "https://www.rolex.com",
+    "isActive": true
+  },
+  {
+    "name": "Omega",
+    "description": "Swiss luxury watchmaker",
+    "logo": "https://example.com/images/brands/omega.png",
+    "website": "https://www.omegawatches.com",
+    "isActive": true
+  },
+  {
+    "name": "Seiko",
+    "description": "Japanese watch manufacturer",
+    "logo": "https://example.com/images/brands/seiko.png",
+    "website": "https://www.seikowatches.com",
+    "isActive": true
+  },
+  {
+    "name": "IKEA",
+    "description": "Swedish furniture retailer",
+    "logo": "https://example.com/images/brands/ikea.png",
+    "website": "https://www.ikea.com",
+    "isActive": true
+  },
+  {
+    "name": "Ashley Furniture",
+    "description": "American furniture manufacturer",
+    "logo": "https://example.com/images/brands/ashley.png",
+    "website": "https://www.ashleyfurniture.com",
+    "isActive": true
+  },
+  {
+    "name": "Herman Miller",
+    "description": "American office furniture manufacturer",
+    "logo": "https://example.com/images/brands/hermanmiller.png",
+    "website": "https://www.hermanmiller.com",
+    "isActive": true
+  }
+]

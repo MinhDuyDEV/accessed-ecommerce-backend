@@ -1,0 +1,176 @@
+[
+  {
+    "name": "Electronics",
+    "description": "Electronic devices and accessories",
+    "image": "https://example.com/images/categories/electronics.jpg",
+    "displayorder": 1,
+    "is_active": true
+  },
+  {
+    "name": "Books",
+    "description": "Books, e-books, and publications",
+    "image": "https://example.com/images/categories/books.jpg",
+    "displayorder": 2,
+    "is_active": true
+  },
+  {
+    "name": "Jewelry",
+    "description": "Fine jewelry and accessories",
+    "image": "https://example.com/images/categories/jewelry.jpg",
+    "displayorder": 3,
+    "is_active": true
+  },
+  {
+    "name": "Toys",
+    "description": "Toys and games for all ages",
+    "image": "https://example.com/images/categories/toys.jpg",
+    "displayorder": 4,
+    "is_active": true
+  },
+  {
+    "name": "Sports",
+    "description": "Sports equipment and accessories",
+    "image": "https://example.com/images/categories/sports.jpg",
+    "displayorder": 5,
+    "is_active": true
+  },
+  {
+    "name": "Watches",
+    "description": "Luxury and casual watches",
+    "image": "https://example.com/images/categories/watches.jpg",
+    "displayorder": 6,
+    "is_active": true
+  },
+  {
+    "name": "Games",
+    "description": "Video games and gaming accessories",
+    "image": "https://example.com/images/categories/games.jpg",
+    "displayorder": 7,
+    "is_active": true
+  },
+  {
+    "name": "Fine Art",
+    "description": "Fine art and collectibles",
+    "image": "https://example.com/images/categories/fine-art.jpg",
+    "displayorder": 8,
+    "is_active": true
+  },
+  {
+    "name": "Software",
+    "description": "Software and digital products",
+    "image": "https://example.com/images/categories/software.jpg",
+    "displayorder": 9,
+    "is_active": true
+  },
+  {
+    "name": "Furniture",
+    "description": "Home and office furniture",
+    "image": "https://example.com/images/categories/furniture.jpg",
+    "displayorder": 10,
+    "is_active": true
+  },
+  {
+    "name": "Smartphones",
+    "description": "Mobile phones and accessories",
+    "image": "https://example.com/images/categories/smartphones.jpg",
+    "displayorder": 1,
+    "is_active": true,
+    "parentName": "Electronics"
+  },
+  {
+    "name": "Laptops",
+    "description": "Laptops and notebooks",
+    "image": "https://example.com/images/categories/laptops.jpg",
+    "displayorder": 2,
+    "is_active": true,
+    "parentName": "Electronics"
+  },
+  {
+    "name": "Tablets",
+    "description": "Tablets and e-readers",
+    "image": "https://example.com/images/categories/tablets.jpg",
+    "displayorder": 3,
+    "is_active": true,
+    "parentName": "Electronics"
+  },
+  {
+    "name": "Audio",
+    "description": "Headphones, speakers, and audio equipment",
+    "image": "https://example.com/images/categories/audio.jpg",
+    "displayorder": 4,
+    "is_active": true,
+    "parentName": "Electronics"
+  },
+  {
+    "name": "Cameras",
+    "description": "Digital cameras and photography equipment",
+    "image": "https://example.com/images/categories/cameras.jpg",
+    "displayorder": 5,
+    "is_active": true,
+    "parentName": "Electronics"
+  },
+  {
+    "name": "Fiction",
+    "description": "Fiction books and novels",
+    "image": "https://example.com/images/categories/fiction.jpg",
+    "displayorder": 1,
+    "is_active": true,
+    "parentName": "Books"
+  },
+  {
+    "name": "Non-Fiction",
+    "description": "Non-fiction books and biographies",
+    "image": "https://example.com/images/categories/non-fiction.jpg",
+    "displayorder": 2,
+    "is_active": true,
+    "parentName": "Books"
+  },
+  {
+    "name": "Textbooks",
+    "description": "Educational and academic textbooks",
+    "image": "https://example.com/images/categories/textbooks.jpg",
+    "displayorder": 3,
+    "is_active": true,
+    "parentName": "Books"
+  },
+  {
+    "name": "Children's Books",
+    "description": "Books for children and young adults",
+    "image": "https://example.com/images/categories/childrens-books.jpg",
+    "displayorder": 4,
+    "is_active": true,
+    "parentName": "Books"
+  },
+  {
+    "name": "Necklaces",
+    "description": "Necklaces and pendants",
+    "image": "https://example.com/images/categories/necklaces.jpg",
+    "displayorder": 1,
+    "is_active": true,
+    "parentName": "Jewelry"
+  },
+  {
+    "name": "Rings",
+    "description": "Rings and bands",
+    "image": "https://example.com/images/categories/rings.jpg",
+    "displayorder": 2,
+    "is_active": true,
+    "parentName": "Jewelry"
+  },
+  {
+    "name": "Earrings",
+    "description": "Earrings and ear cuffs",
+    "image": "https://example.com/images/categories/earrings.jpg",
+    "displayorder": 3,
+    "is_active": true,
+    "parentName": "Jewelry"
+  },
+  {
+    "name": "Bracelets",
+    "description": "Bracelets and bangles",
+    "image": "https://example.com/images/categories/bracelets.jpg",
+    "displayorder": 4,
+    "is_active": true,
+    "parentName": "Jewelry"
+  }
+]

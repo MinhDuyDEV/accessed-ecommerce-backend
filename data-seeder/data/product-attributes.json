@@ -1,0 +1,169 @@
+[
+  {
+    "name": "Color",
+    "description": "Product color options",
+    "values": [
+      {
+        "value": "Black",
+        "description": "Black color",
+        "colorCode": "#000000"
+      },
+      {
+        "value": "White",
+        "description": "White color",
+        "colorCode": "#FFFFFF"
+      },
+      {
+        "value": "Silver",
+        "description": "Silver color",
+        "colorCode": "#C0C0C0"
+      },
+      { "value": "Gold", "description": "Gold color", "colorCode": "#FFD700" },
+      { "value": "Blue", "description": "Blue color", "colorCode": "#0000FF" },
+      { "value": "Red", "description": "Red color", "colorCode": "#FF0000" },
+      {
+        "value": "Green",
+        "description": "Green color",
+        "colorCode": "#008000"
+      },
+      {
+        "value": "Rose Gold",
+        "description": "Rose Gold color",
+        "colorCode": "#B76E79"
+      }
+    ]
+  },
+  {
+    "name": "Size",
+    "description": "Product size options",
+    "values": [
+      { "value": "Small", "description": "Small size" },
+      { "value": "Medium", "description": "Medium size" },
+      { "value": "Large", "description": "Large size" },
+      { "value": "X-Large", "description": "Extra large size" },
+      { "value": "13-inch", "description": "13-inch display size" },
+      { "value": "15-inch", "description": "15-inch display size" },
+      { "value": "17-inch", "description": "17-inch display size" }
+    ]
+  },
+  {
+    "name": "Material",
+    "description": "Product material options",
+    "values": [
+      { "value": "Leather", "description": "Leather material" },
+      { "value": "Plastic", "description": "Plastic material" },
+      { "value": "Metal", "description": "Metal material" },
+      { "value": "Glass", "description": "Glass material" },
+      { "value": "Wood", "description": "Wood material" },
+      { "value": "Fabric", "description": "Fabric material" }
+    ]
+  },
+  {
+    "name": "Storage",
+    "description": "Storage capacity options",
+    "values": [
+      { "value": "64GB", "description": "64 gigabytes storage" },
+      { "value": "128GB", "description": "128 gigabytes storage" },
+      { "value": "256GB", "description": "256 gigabytes storage" },
+      { "value": "512GB", "description": "512 gigabytes storage" },
+      { "value": "1TB", "description": "1 terabyte storage" }
+    ]
+  },
+  {
+    "name": "RAM",
+    "description": "Memory capacity options",
+    "values": [
+      { "value": "4GB", "description": "4 gigabytes RAM" },
+      { "value": "8GB", "description": "8 gigabytes RAM" },
+      { "value": "16GB", "description": "16 gigabytes RAM" },
+      { "value": "32GB", "description": "32 gigabytes RAM" }
+    ]
+  },
+  {
+    "name": "Processor",
+    "description": "CPU/Processor options",
+    "values": [
+      { "value": "Intel i5", "description": "Intel Core i5 processor" },
+      { "value": "Intel i7", "description": "Intel Core i7 processor" },
+      { "value": "Intel i9", "description": "Intel Core i9 processor" },
+      { "value": "AMD Ryzen 5", "description": "AMD Ryzen 5 processor" },
+      { "value": "AMD Ryzen 7", "description": "AMD Ryzen 7 processor" },
+      { "value": "Apple M1", "description": "Apple M1 chip" },
+      { "value": "Apple M2", "description": "Apple M2 chip" }
+    ]
+  },
+  {
+    "name": "Format",
+    "description": "Book format options",
+    "values": [
+      { "value": "Hardcover", "description": "Hardcover book format" },
+      { "value": "Paperback", "description": "Paperback book format" },
+      { "value": "E-book", "description": "Electronic book format" },
+      { "value": "Audiobook", "description": "Audio book format" }
+    ]
+  },
+  {
+    "name": "Metal Type",
+    "description": "Jewelry metal type options",
+    "values": [
+      { "value": "Sterling Silver", "description": "925 Sterling Silver" },
+      { "value": "Gold", "description": "14K Gold" },
+      { "value": "Rose Gold", "description": "14K Rose Gold" },
+      { "value": "Platinum", "description": "Platinum" },
+      { "value": "White Gold", "description": "18K White Gold" }
+    ]
+  },
+  {
+    "name": "Gemstone",
+    "description": "Jewelry gemstone options",
+    "values": [
+      { "value": "Diamond", "description": "Diamond gemstone" },
+      { "value": "Ruby", "description": "Ruby gemstone" },
+      { "value": "Sapphire", "description": "Sapphire gemstone" },
+      { "value": "Emerald", "description": "Emerald gemstone" },
+      { "value": "Pearl", "description": "Pearl gemstone" }
+    ]
+  },
+  {
+    "name": "Movement Type",
+    "description": "Watch movement type options",
+    "values": [
+      {
+        "value": "Automatic",
+        "description": "Self-winding mechanical movement"
+      },
+      { "value": "Quartz", "description": "Battery-powered quartz movement" },
+      {
+        "value": "Mechanical",
+        "description": "Hand-wound mechanical movement"
+      },
+      { "value": "Solar", "description": "Solar-powered movement" }
+    ]
+  },
+  {
+    "name": "Band Material",
+    "description": "Watch band material options",
+    "values": [
+      { "value": "Leather", "description": "Leather watch band" },
+      {
+        "value": "Stainless Steel",
+        "description": "Stainless steel watch band"
+      },
+      { "value": "Rubber", "description": "Rubber watch band" },
+      { "value": "Nylon", "description": "Nylon watch band" },
+      { "value": "Ceramic", "description": "Ceramic watch band" }
+    ]
+  },
+  {
+    "name": "Wood Type",
+    "description": "Furniture wood type options",
+    "values": [
+      { "value": "Oak", "description": "Oak wood" },
+      { "value": "Maple", "description": "Maple wood" },
+      { "value": "Walnut", "description": "Walnut wood" },
+      { "value": "Cherry", "description": "Cherry wood" },
+      { "value": "Pine", "description": "Pine wood" },
+      { "value": "Mahogany", "description": "Mahogany wood" }
+    ]
+  }
+]

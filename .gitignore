@@ -1,7 +1,6 @@
 # compiled output
 /dist
 /node_modules
-/data-seeder/data
 /data-seeder/node_modules
 /build
 

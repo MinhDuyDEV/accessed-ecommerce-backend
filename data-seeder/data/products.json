@@ -1,0 +1,334 @@
+[
+  {
+    "name": "iPhone 14 Pro",
+    "description": "Apple's flagship smartphone with advanced camera system and A16 Bionic chip",
+    "type": "variable",
+    "price": 999.0,
+    "discountPrice": 949.0,
+    "sku": "APIP14PRO",
+    "quantity": 100,
+    "status": "published",
+    "weight": 0.2,
+    "dimensions": "147.5 x 71.5 x 7.85 mm",
+    "brand": "Apple",
+    "categories": ["Electronics", "Smartphones"],
+    "images": [
+      {
+        "url": "https://example.com/images/products/iphone14pro-main.jpg",
+        "alt": "iPhone 14 Pro",
+        "isDefault": true
+      }
+    ],
+    "variants": [
+      {
+        "sku": "APIP14PRO-128-BLK",
+        "name": "iPhone 14 Pro 128GB Black",
+        "price": 999.0,
+        "discountPrice": 949.0,
+        "quantity": 30,
+        "attributes": {
+          "Color": "Black",
+          "Storage": "128GB"
+        },
+        "images": [
+          {
+            "url": "https://example.com/images/products/iphone14pro-black-front.jpg",
+            "alt": "iPhone 14 Pro - Black - Front",
+            "isDefault": true
+          }
+        ]
+      },
+      {
+        "sku": "APIP14PRO-128-SLV",
+        "name": "iPhone 14 Pro 128GB Silver",
+        "price": 999.0,
+        "discountPrice": 949.0,
+        "quantity": 25,
+        "attributes": {
+          "Color": "Silver",
+          "Storage": "128GB"
+        },
+        "images": [
+          {
+            "url": "https://example.com/images/products/iphone14pro-silver-front.jpg",
+            "alt": "iPhone 14 Pro - Silver - Front",
+            "isDefault": true
+          }
+        ]
+      },
+      {
+        "sku": "APIP14PRO-256-BLK",
+        "name": "iPhone 14 Pro 256GB Black",
+        "price": 1099.0,
+        "discountPrice": 1049.0,
+        "quantity": 20,
+        "attributes": {
+          "Color": "Black",
+          "Storage": "256GB"
+        },
+        "images": [
+          {
+            "url": "https://example.com/images/products/iphone14pro-black-front.jpg",
+            "alt": "iPhone 14 Pro - Black - Front",
+            "isDefault": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MacBook Pro 16\"",
+    "description": "Powerful laptop for professionals with M2 Pro chip",
+    "type": "variable",
+    "price": 2499.0,
+    "discountPrice": 2399.0,
+    "sku": "APMBP16M2",
+    "quantity": 50,
+    "status": "published",
+    "weight": 2.15,
+    "dimensions": "355.7 x 248.1 x 16.8 mm",
+    "brand": "Apple",
+    "categories": ["Electronics", "Laptops"],
+    "images": [
+      {
+        "url": "https://example.com/images/products/macbookpro-main.jpg",
+        "alt": "MacBook Pro 16\"",
+        "isDefault": true
+      }
+    ],
+    "variants": [
+      {
+        "sku": "APMBP16M2-16-512-SLV",
+        "name": "MacBook Pro 16\" M2 16GB RAM 512GB SSD Silver",
+        "price": 2499.0,
+        "discountPrice": 2399.0,
+        "quantity": 15,
+        "attributes": {
+          "Color": "Silver",
+          "RAM": "16GB",
+          "Storage": "512GB"
+        },
+        "images": [
+          {
+            "url": "https://example.com/images/products/macbookpro-silver.jpg",
+            "alt": "MacBook Pro 16\" - Silver",
+            "isDefault": true
+          }
+        ]
+      },
+      {
+        "sku": "APMBP16M2-16-512-GRY",
+        "name": "MacBook Pro 16\" M2 16GB RAM 512GB SSD Space Gray",
+        "price": 2499.0,
+        "discountPrice": 2399.0,
+        "quantity": 15,
+        "attributes": {
+          "Color": "Black",
+          "RAM": "16GB",
+          "Storage": "512GB"
+        },
+        "images": [
+          {
+            "url": "https://example.com/images/products/macbookpro-spacegray.jpg",
+            "alt": "MacBook Pro 16\" - Space Gray",
+            "isDefault": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "The Midnight Library",
+    "description": "Novel by Matt Haig about the choices that make up a life",
+    "type": "variable",
+    "price": 24.99,
+    "discountPrice": 19.99,
+    "sku": "BOOKMIDLIB",
+    "quantity": 200,
+    "status": "published",
+    "weight": 0.4,
+    "dimensions": "216 x 135 x 25 mm",
+    "brand": "Penguin Random House",
+    "categories": ["Books", "Fiction"],
+    "images": [
+      {
+        "url": "https://example.com/images/products/midnightlibrary-main.jpg",
+        "alt": "The Midnight Library",
+        "isDefault": true
+      }
+    ],
+    "variants": [
+      {
+        "sku": "BOOKMIDLIB-HC",
+        "name": "The Midnight Library - Hardcover",
+        "price": 24.99,
+        "discountPrice": 19.99,
+        "quantity": 50,
+        "attributes": {
+          "Format": "Hardcover"
+        },
+        "images": [
+          {
+            "url": "https://example.com/images/products/midnightlibrary-hardcover.jpg",
+            "alt": "The Midnight Library - Hardcover",
+            "isDefault": true
+          }
+        ]
+      },
+      {
+        "sku": "BOOKMIDLIB-PB",
+        "name": "The Midnight Library - Paperback",
+        "price": 16.99,
+        "discountPrice": 14.99,
+        "quantity": 75,
+        "attributes": {
+          "Format": "Paperback"
+        },
+        "images": [
+          {
+            "url": "https://example.com/images/products/midnightlibrary-paperback.jpg",
+            "alt": "The Midnight Library - Paperback",
+            "isDefault": true
+          }
+        ]
+      },
+      {
+        "sku": "BOOKMIDLIB-EB",
+        "name": "The Midnight Library - E-book",
+        "price": 12.99,
+        "discountPrice": 9.99,
+        "quantity": 999,
+        "attributes": {
+          "Format": "E-book"
+        },
+        "images": [
+          {
+            "url": "https://example.com/images/products/midnightlibrary-ebook.jpg",
+            "alt": "The Midnight Library - E-book",
+            "isDefault": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Diamond Pendant Necklace",
+    "description": "Elegant diamond pendant on 18K white gold chain",
+    "type": "variable",
+    "price": 1299.0,
+    "discountPrice": 1199.0,
+    "sku": "JEWDIAMPEND",
+    "quantity": 25,
+    "status": "published",
+    "weight": 0.02,
+    "dimensions": "45 cm length",
+    "brand": "Tiffany & Co.",
+    "categories": ["Jewelry", "Necklaces"],
+    "images": [
+      {
+        "url": "https://example.com/images/products/diamondpendant-main.jpg",
+        "alt": "Diamond Pendant Necklace",
+        "isDefault": true
+      }
+    ],
+    "variants": [
+      {
+        "sku": "JEWDIAMPEND-WG-45",
+        "name": "Diamond Pendant Necklace - White Gold - 45cm",
+        "price": 1299.0,
+        "discountPrice": 1199.0,
+        "quantity": 10,
+        "attributes": {
+          "Metal Type": "White Gold",
+          "Gemstone": "Diamond"
+        },
+        "images": [
+          {
+            "url": "https://example.com/images/products/diamondpendant-whitegold.jpg",
+            "alt": "Diamond Pendant Necklace - White Gold",
+            "isDefault": true
+          }
+        ]
+      },
+      {
+        "sku": "JEWDIAMPEND-YG-45",
+        "name": "Diamond Pendant Necklace - Yellow Gold - 45cm",
+        "price": 1299.0,
+        "discountPrice": 1199.0,
+        "quantity": 7,
+        "attributes": {
+          "Metal Type": "Gold",
+          "Gemstone": "Diamond"
+        },
+        "images": [
+          {
+            "url": "https://example.com/images/products/diamondpendant-yellowgold.jpg",
+            "alt": "Diamond Pendant Necklace - Yellow Gold",
+            "isDefault": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Rolex Submariner",
+    "description": "Iconic diving watch with unidirectional rotatable bezel",
+    "type": "variable",
+    "price": 9999.0,
+    "discountPrice": null,
+    "sku": "WATCHSUBMAR",
+    "quantity": 10,
+    "status": "published",
+    "weight": 0.16,
+    "dimensions": "40 mm diameter",
+    "brand": "Rolex",
+    "categories": ["Watches"],
+    "images": [
+      {
+        "url": "https://example.com/images/products/submariner-main.jpg",
+        "alt": "Rolex Submariner",
+        "isDefault": true
+      }
+    ],
+    "variants": [
+      {
+        "sku": "WATCHSUBMAR-SS-BLK",
+        "name": "Rolex Submariner - Stainless Steel - Black Dial",
+        "price": 9999.0,
+        "discountPrice": null,
+        "quantity": 5,
+        "attributes": {
+          "Band Material": "Stainless Steel",
+          "Color": "Black",
+          "Movement Type": "Automatic"
+        },
+        "images": [
+          {
+            "url": "https://example.com/images/products/submariner-steel-black.jpg",
+            "alt": "Rolex Submariner - Steel - Black",
+            "isDefault": true
+          }
+        ]
+      },
+      {
+        "sku": "WATCHSUBMAR-SS-BLU",
+        "name": "Rolex Submariner - Stainless Steel - Blue Dial",
+        "price": 10499.0,
+        "discountPrice": null,
+        "quantity": 3,
+        "attributes": {
+          "Band Material": "Stainless Steel",
+          "Color": "Blue",
+          "Movement Type": "Automatic"
+        },
+        "images": [
+          {
+            "url": "https://example.com/images/products/submariner-steel-blue.jpg",
+            "alt": "Rolex Submariner - Steel - Blue",
+            "isDefault": true
+          }
+        ]
+      }
+    ]
+  }
+]
